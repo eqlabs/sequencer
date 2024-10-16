@@ -818,5 +818,5 @@ Execution failed. Failure reason: 0x496e76616c6964207363656e6172696f ('Invalid s
     // Compare expected and actual error.
     let error =
         invoke_deploy_tx.execute(state, &block_context, true, true).unwrap().revert_error.unwrap();
-    assert_eq!(error.to_string(), expected_error);
+    assert_eq!(String::from(error), expected_error);
 }
